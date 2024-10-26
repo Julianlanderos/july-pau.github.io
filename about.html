@@ -165,7 +165,7 @@
                                                 <div class="col-12 col-md-4">
                                                     <div class="counter_box">
                                                         <div class="divider"></div>
-                                                        <span class="counter">11</span>
+                                                        <span id="meses" class="counter">11</span>
                                                         <h5>Meses Juntos</h5>
                                                     </div>
                                                 </div>
@@ -268,3 +268,18 @@
 <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+<script>
+    // Obtener la fecha actual y la fecha inicial
+const currentDate = new Date();
+const startDate = new Date("2022-10-27");
+
+// Calcular la diferencia en meses
+const yearsDifference = currentDate.getFullYear() - startDate.getFullYear();
+const monthsDifference = currentDate.getMonth() - startDate.getMonth();
+const totalMonthsDifference = (yearsDifference * 12) + monthsDifference;
+
+// Actualizar el contenido del span con el id 'meses'
+document.getElementById('meses').textContent = totalMonthsDifference;
+
+</script>
