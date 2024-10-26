@@ -170,21 +170,21 @@
                                                 <div class="col-12 col-md-4">
                                                     <div class="counter_box">
                                                         <div class="divider"></div>
-                                                        +<span class="counter">50</span>
+                                                        +<span class="counter">120</span>
                                                         <h5>Citas</h5>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-4">
                                                     <div class="counter_box">
                                                         <div class="divider"></div>
-                                                        <span class="counter">380</span>
+                                                        <span id="diasDos" class="counter">380</span>
                                                         <h5>Días Juntos</h5>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-4">
                                                     <div class="counter_box">
                                                         <div class="divider"></div>
-                                                        <span class="counter">310</span>
+                                                        <span id="dias" class="counter"></span>
                                                         <h5>Días como novios oficiales</h5>
                                                     </div>
                                                 </div>
@@ -277,3 +277,19 @@
 <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+<script>
+    // Obtener la fecha actual y la fecha inicial
+const currentDate = new Date();
+const startDate = new Date("2022-10-27");
+
+// Calcular la diferencia en días
+const timeDifference = currentDate - startDate;
+const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+const daystwo = Math.floor(daysDifference + 70);
+
+// Actualizar el contenido del span con el id 'dias'
+document.getElementById('dias').textContent = daysDifference;
+document.getElementById('diasDos').textContent = daystwo;
+
+</script>
